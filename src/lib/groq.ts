@@ -25,7 +25,7 @@ export async function generateMeetingSummary(rawNotes: string): Promise<MeetingS
       body: JSON.stringify({
         model: "openai/gpt-oss-120b",
         temperature: 0.4,
-        max_tokens: 1000,
+        max_tokens: 2000,
         response_format: { type: "json_object" },
         messages: [
           { role: "system", content: systemPrompt },
